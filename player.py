@@ -1,5 +1,6 @@
-from circleshape import *
+import pygame
 from constants import *
+from circleshape import CircleShape
 
 class Player(CircleShape):
     def __init__(self, x, y):
@@ -17,4 +18,4 @@ def triangle(self):
 
 
 def draw(self, screen):
-    pygame.draw.polygon(screen, (255, 255, 255), self.triangle(), width=2)
+    pygame.draw.polygon(screen, "white", self.triangle(), 2)

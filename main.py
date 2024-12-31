@@ -3,7 +3,7 @@
 # throughout this file
 import pygame
 from constants import *
-from player import *
+from player import Player
 
 
 def main():
@@ -22,11 +22,11 @@ def main():
             if event.type == pygame.QUIT:
                 return
             
-        screen.fill((0, 0, 0))
+        screen.fill("black")
         player.draw(screen)
         
         pygame.display.flip()
-        
+
         # limit the framerate to 60 FPS
         dt = clock.tick(60) / 1000
 
